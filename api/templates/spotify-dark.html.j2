@@ -37,57 +37,53 @@
 }
 
 .art {
-    width: 27%;
-    margin-top: 10px; /* Adjust margin for spacing */
+    width: 100px; /* Adjust width as needed */
+    margin-top: 10px; /* Increase margin to fit within container */
 }
 
 .content {
-    width: 100%; /* Adjust width to fit within container */
-    text-align: center; /* Center text */
+    text-align: center;
+    margin-top: 10px; /* Increase margin to fit within container */
 }
 
-.song, .artist {
-    width: 100%; /* Adjust width to fit within container */
+.song {
+    width: 330px;
     color: #666;
-    font-size: 24px;
-    margin-top: 3px;
-    margin-bottom: 5px; /* Add margin for spacing */
     overflow: hidden;
-    text-overflow: ellipsis;
+    margin-top: 3px;
+    font-size: 24px;
     white-space: nowrap;
-    background: linear-gradient(
-                    125deg, 
-                    rgb({{ songPalette[0][0] }}, {{ songPalette[0][1] }}, {{ songPalette[0][2] }}),
-                    rgb({{ songPalette[1][0] }}, {{ songPalette[1][1] }}, {{ songPalette[1][2] }})
-                );
-    background-size: 200% 100%;
-    background-position: 0% 50%;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-    animation: gradient 15s ease infinite;
+    text-overflow: ellipsis;
+    /* Remove background gradient to avoid overflow */
+}
+
+.artist {
+    width: 330px;
+    color: #9f9f9f;
+    font-size: 20px;
+    margin-top: 4px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* Remove background gradient to avoid overflow */
 }
 
 .cover {
     width: 100px;
     height: 100px;
     border-radius: 5px;
-    margin-bottom: 10px; /* Adjust margin for spacing */
 }
 
 #bars {
-    width: 100%; /* Adjust width to fit within container */
-    position: relative;
-    margin-top: 10px; /* Adjust margin for spacing */
+    margin-top: 10px; /* Increase margin to fit within container */
 }
 
 .bar {
-    width: calc(25% - 5px); /* Adjust width to fit within container */
+    width: 3px;
     height: 15px;
-    margin-right: 5px; /* Adjust margin for spacing */
-    background: #5433FF;  
-    background: -webkit-linear-gradient(to right, #20BDFF, #ab66ff, #5433FF, #20BDFF); 
+    background: #5433FF;
+    background: -webkit-linear-gradient(to right, #20BDFF, #ab66ff, #5433FF, #20BDFF);
     background: linear-gradient(
                     90deg, 
                     rgb({{ barPalette[0][0] }}, {{ barPalette[0][1] }}, {{ barPalette[0][2] }}) 0%, 
