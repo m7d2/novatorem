@@ -1,5 +1,5 @@
-<svg width="480" height="133" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <foreignObject width="480" height="133">
+<svg width="480" height="250" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <foreignObject width="480" height="250">
         <div xmlns="http://www.w3.org/1999/xhtml" class="container">
             <style>
 .main {
@@ -37,53 +37,57 @@
 }
 
 .art {
-    width: 100px; /* Adjust width as needed */
-    margin-top: 10px; /* Increase margin to fit within container */
+    width: 27%;
+    margin-top: 10px; /* Adjust margin for spacing */
 }
 
 .content {
-    text-align: center;
-    margin-top: 10px; /* Increase margin to fit within container */
+    width: 100%; /* Adjust width to fit within container */
+    text-align: center; /* Center text */
 }
 
-.song {
-    width: 330px;
+.song, .artist {
+    width: 100%; /* Adjust width to fit within container */
     color: #666;
-    overflow: hidden;
-    margin-top: 3px;
     font-size: 24px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    /* Remove background gradient to avoid overflow */
-}
-
-.artist {
-    width: 330px;
-    color: #9f9f9f;
-    font-size: 20px;
-    margin-top: 4px;
-    margin-bottom: 5px;
+    margin-top: 3px;
+    margin-bottom: 5px; /* Add margin for spacing */
     overflow: hidden;
-    white-space: nowrap;
     text-overflow: ellipsis;
-    /* Remove background gradient to avoid overflow */
+    white-space: nowrap;
+    background: linear-gradient(
+                    125deg, 
+                    rgb({{ songPalette[0][0] }}, {{ songPalette[0][1] }}, {{ songPalette[0][2] }}),
+                    rgb({{ songPalette[1][0] }}, {{ songPalette[1][1] }}, {{ songPalette[1][2] }})
+                );
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    animation: gradient 15s ease infinite;
 }
 
 .cover {
     width: 100px;
     height: 100px;
     border-radius: 5px;
+    margin-bottom: 10px; /* Adjust margin for spacing */
 }
 
 #bars {
-    margin-top: 10px; /* Increase margin to fit within container */
+    width: 100%; /* Adjust width to fit within container */
+    position: relative;
+    margin-top: 10px; /* Adjust margin for spacing */
 }
 
 .bar {
-    width: 3px;
+    width: calc(25% - 5px); /* Adjust width to fit within container */
     height: 15px;
-    background: #5433FF;
-    background: -webkit-linear-gradient(to right, #20BDFF, #ab66ff, #5433FF, #20BDFF);
+    margin-right: 5px; /* Adjust margin for spacing */
+    background: #5433FF;  
+    background: -webkit-linear-gradient(to right, #20BDFF, #ab66ff, #5433FF, #20BDFF); 
     background: linear-gradient(
                     90deg, 
                     rgb({{ barPalette[0][0] }}, {{ barPalette[0][1] }}, {{ barPalette[0][2] }}) 0%, 
