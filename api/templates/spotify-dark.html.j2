@@ -2,129 +2,124 @@
     <foreignObject width="480" height="133">
         <div xmlns="http://www.w3.org/1999/xhtml" class="container">
             <style>
-                .main {
-                    display: flex;
-                    flex-direction: column; 
-                    align-items: center;
-                }
+               .main {
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center items horizontally */
+}
 
-                .currentStatus {
-                    <!-- float: left; -->
-                    color: #f7f7f7;
-                    font-size: 24px;
-                    position: static;
-                    margin-top: -5px;
-                    <!-- margin-left: 10px; -->
-                    background: linear-gradient(
-                                    -125deg, 
-                                    rgb({{ songPalette[0][0] }}, {{ songPalette[0][1] }}, {{ songPalette[0][2] }}),
-                                    rgb({{ songPalette[1][0] }}, {{ songPalette[1][1] }}, {{ songPalette[1][2] }})
-                                );                    
-                    background-size: 200% 100%;
-                    background-position: 0% 50%;
-                    -webkit-text-fill-color: transparent;
-                    -webkit-background-clip: text;
-                    -webkit-box-decoration-break: clone;
-                    box-decoration-break: clone;
-                    animation: gradient 17s ease infinite;
-                }
-                
-                .container {
-                    flex-flow: column
-                    border-radius: 5px;
-                    padding: 10px 10px 10px 0px;
-                    background-color: #{{background_color}};
-                    border: 1px solid #{{border_color}};
-                }
+.currentStatus {
+    /* Styles for the current status */
+    color: #f7f7f7;
+    font-size: 24px;
+    margin-top: -5px;
+    background: linear-gradient(
+                    -125deg, 
+                    rgb({{ songPalette[0][0] }}, {{ songPalette[0][1] }}, {{ songPalette[0][2] }}),
+                    rgb({{ songPalette[1][0] }}, {{ songPalette[1][1] }}, {{ songPalette[1][2] }})
+                );                    
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    animation: gradient 17s ease infinite;
+}
 
-                .art {
-                    width: 27%;
-                    <!-- clear: both; -->
-                    <!-- margin-left: -5px; -->
-                }
+.container {
+    border-radius: 5px;
+    padding: 10px 10px 10px 0px;
+    background-color: #{{background_color}};
+    border: 1px solid #{{border_color}};
+    text-align: center; /* Center text */
+}
 
-                .content {
-                    width: 80%;
-                }
+.art {
+    width: 27%;
+    margin-top: 10px; /* Adjust spacing */
+}
 
-                .song {
-                    width: 330px;
-                    color: #666;
-                    overflow: hidden;
-                    margin-top: 3px;
-                    font-size: 24px;
-                    text-align: center;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    background: linear-gradient(
-                                    125deg, 
-                                    rgb({{ songPalette[0][0] }}, {{ songPalette[0][1] }}, {{ songPalette[0][2] }}),
-                                    rgb({{ songPalette[1][0] }}, {{ songPalette[1][1] }}, {{ songPalette[1][2] }})
-                                );
-                    background-size: 200% 100%;
-                    background-position: 0% 50%;
-                    -webkit-text-fill-color: transparent;
-                    -webkit-background-clip: text;
-                    -webkit-box-decoration-break: clone;
-                    box-decoration-break: clone;
-                    animation: gradient 15s ease infinite;
-                }
+.content {
+    width: 80%;
+}
 
-                .artist {
-                    width: 330px;
-                    color: #9f9f9f;
-                    font-size: 20px;
-                    margin-top: 4px;
-                    text-align: center;
-                    margin-bottom: 5px;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    background: linear-gradient(
-                                    -125deg, 
-                                    rgb({{ songPalette[0][0] }}, {{ songPalette[0][1] }}, {{ songPalette[0][2] }}),
-                                    rgb({{ songPalette[1][0] }}, {{ songPalette[1][1] }}, {{ songPalette[1][2] }})
-                                );                    
-                    background-size: 200% 100%;
-                    background-position: 0% 50%;
-                    -webkit-text-fill-color: transparent;
-                    -webkit-background-clip: text;
-                    -webkit-box-decoration-break: clone;
-                    box-decoration-break: clone;
-                    animation: gradient 12s ease infinite;
-                }
+.song {
+    width: 330px;
+    color: #666;
+    overflow: hidden;
+    margin-top: 3px;
+    font-size: 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background: linear-gradient(
+                    125deg, 
+                    rgb({{ songPalette[0][0] }}, {{ songPalette[0][1] }}, {{ songPalette[0][2] }}),
+                    rgb({{ songPalette[1][0] }}, {{ songPalette[1][1] }}, {{ songPalette[1][2] }})
+                );
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    animation: gradient 15s ease infinite;
+}
 
-                .cover {
-                    width: 100px;
-                    height: 100px;
-                    border-radius: 5px;
-                }
+.artist {
+    width: 330px;
+    color: #9f9f9f;
+    font-size: 20px;
+    margin-top: 4px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background: linear-gradient(
+                    -125deg, 
+                    rgb({{ songPalette[0][0] }}, {{ songPalette[0][1] }}, {{ songPalette[0][2] }}),
+                    rgb({{ songPalette[1][0] }}, {{ songPalette[1][1] }}, {{ songPalette[1][2] }})
+                );                    
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    animation: gradient 12s ease infinite;
+}
 
-                #bars {
-                    bottom: 23px;
-                    position: absolute;
-                    <!-- margin: -20px 0 0 0px; -->
-                }
+.cover {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
 
-                .bar {
-                    width: 3px;
-                    bottom: 1px;
-                    height: 15px;
-                    position: absolute;
-                    background: #5433FF;  /* fallback for old browsers */
-                    background: -webkit-linear-gradient(to right, #20BDFF, #ab66ff, #5433FF, #20BDFF);  /* Chrome 10-25, Safari 5.1-6 */
-                    background: linear-gradient(
-                                    90deg, 
-                                    rgb({{ barPalette[0][0] }}, {{ barPalette[0][1] }}, {{ barPalette[0][2] }}) 0%, 
-                                    rgb({{ barPalette[1][0] }}, {{ barPalette[1][1] }}, {{ barPalette[1][2] }}) 33%, 
-                                    rgb({{ barPalette[2][0] }}, {{ barPalette[2][1] }}, {{ barPalette[2][2] }}) 66%, 
-                                    rgb({{ barPalette[3][0] }}, {{ barPalette[3][1] }}, {{ barPalette[3][2] }}) 100%
-                                );
-                    background-size: 200% 100%;
-                    background-position: 0% 50%;
-                    background-attachment: fixed;
-                    animation: gradient 15s ease infinite, pulse 0ms -800ms ease-in infinite alternate;
-                }
+#bars {
+    position: relative; /* Make position relative */
+    bottom: 0; /* Align bars to the bottom */
+    margin-top: 20px; /* Adjust spacing */
+    display: flex; /* Make the bars flex container */
+    justify-content: center; /* Center bars horizontally */
+}
+
+.bar {
+    width: 3px;
+    height: 15px;
+    background: #5433FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #20BDFF, #ab66ff, #5433FF, #20BDFF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+                    90deg, 
+                    rgb({{ barPalette[0][0] }}, {{ barPalette[0][1] }}, {{ barPalette[0][2] }}) 0%, 
+                    rgb({{ barPalette[1][0] }}, {{ barPalette[1][1] }}, {{ barPalette[1][2] }}) 33%, 
+                    rgb({{ barPalette[2][0] }}, {{ barPalette[2][1] }}, {{ barPalette[2][2] }}) 66%, 
+                    rgb({{ barPalette[3][0] }}, {{ barPalette[3][1] }}, {{ barPalette[3][2] }}) 100%
+                );
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+    background-attachment: fixed;
+    animation: gradient 15s ease infinite, pulse 0ms -800ms ease-in infinite alternate;
+}
                 
                 .spotify-logo {
                     position: fixed;
